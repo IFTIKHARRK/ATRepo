@@ -11,10 +11,10 @@ pool: Demoagentpool
 steps:
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(System.WorkingDirectory)'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(System.WorkingDirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
 
